@@ -1,0 +1,134 @@
+.story-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  padding: 100px 0px;
+  .left-img {
+    position: absolute;
+    left: -150px;
+    background: url('../images/main_page/vegetables_transparent.png') no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 350px;
+    height: 100%;
+    z-index: 1;
+
+  }
+
+  .story-container {
+    display: flex;
+    flex-direction: column;
+    .top-row {
+      text-align: center;
+      margin-bottom: 50px;
+      h2 {
+        @include h2-tag;
+      }
+    }
+
+    .bottom-row {
+      display: flex;
+      flex-direction: row;
+      z-index: 2;
+      p {
+        @include p($padding: 0px 15px);
+        width: 50%;
+      }
+    }
+  }
+
+  .right-img {
+    position: absolute;
+    right: -150px;
+    background: url('../images/main_page/tomatos_transparent.png') no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 350px;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+// Media Queries
+
+@media (max-width: 1024px) {
+  .story-section {
+    .left-img, .right-img {
+      display: none;
+    }
+
+    .story-container {
+      .top-row {
+        h2 {
+          font-size: 38px;
+        }
+      }
+      padding: 0px 25px;
+      .bottom-row {
+        p {
+          @include p($padding: 0px 20px)
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .story-section {
+    .left-img, .right-img {
+      display: none;
+    }
+
+    .story-container {
+      .bottom-row {
+        p {
+          @include p($padding: 0px 20px)
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .story-section {
+    padding: 50px 0px;
+    .story-container {
+      .top-row {
+        margin-bottom: 15px;
+      }
+      .bottom-row {
+        width: 80%;
+        margin: auto;
+        flex-direction: column;
+        p {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .story-section {
+    padding: 50px 0px;
+    .story-container {
+      .top-row {
+        margin-bottom: 15px;
+      }
+      .bottom-row {
+        flex-direction: column;
+        p {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

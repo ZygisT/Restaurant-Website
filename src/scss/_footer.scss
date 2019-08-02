@@ -1,0 +1,200 @@
+footer {
+  background: url('../images/footer/footer_img_new.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+  .footer-content-container {
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-font-color;
+    h2 {
+      @include h2-tag;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+    .footer-about-us {
+      width: 315px;
+      height: 300px;
+      padding: 0px 20px;
+      display: flex;
+      flex-direction: column;
+      .top-row {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        h3 {
+          @include h2-tag;
+          font-size: 20px;
+          margin-left: 15px;
+          margin-bottom: 0;
+          position: relative;
+          top: 10px;
+        }
+      }
+      .bottom-row {
+        margin-bottom: 15px;
+        p {
+          @include p($padding: 0px);
+          color: inherit;
+          text-align: justify;
+        }
+      }
+    }
+
+    .footer-contact-us {
+      width: 315px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px 20px;
+      color: $primary-font-color;
+      .icon {
+        margin-right: 10px;
+      }
+      .address {
+        display: flex;
+        p {
+          @include p($padding: 0px);
+          margin-bottom: 15px;
+          color: inherit;
+        }
+      }
+
+      .phone-number {
+        display: flex;
+        p {
+          @include p($padding: 0px);
+          margin-bottom: 15px;
+          color: inherit;
+        }
+      }
+
+      .email {
+        display: flex;
+        p {
+          @include p($padding: 0px);
+          margin-bottom: 15px;
+          color: inherit;
+        }
+      }
+
+      .social-media-links-container {
+        display: flex;
+        justify-content: center;
+        color: $primary-font-color;
+        .social-media-link {
+          font-size: 16px;
+          margin: 20px;
+          color: inherit;
+          transition: $transition-behavor;
+        }
+        .social-media-link:hover {
+          color: $primary-hover-color;
+        }
+      }
+
+    }
+
+    .opening-hours {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      width: 315px;
+      height: 300px;
+      padding: 0px 20px;
+      p {
+        @include p($padding: 0px);
+        margin-bottom: 15px;
+        color: inherit;
+        text-align: center;
+
+      }
+    }
+
+  }
+  .toTop {
+    position: absolute;
+    z-index: 99;
+    font-size: 50px;
+    color: red;
+  }
+  .footer-content-container > div {
+    z-index: 2;
+  }
+}
+
+footer:after {
+  @include background-overlay;
+}
+
+
+// Media Queries
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 767px) and (min-width: 481px) {
+  footer {
+    .footer-content-container {
+      flex-direction: column;
+      .footer-about-us, .footer-contact-us, .opening-hours {
+        border-bottom: 1px solid $border-color;
+        padding: 50px 20px;
+        height: auto;
+      }
+      .opening-hours {
+        border-bottom: none;
+      }
+      .footer-about-us {
+        .top-row {
+          h3 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  footer {
+    .footer-content-container {
+      flex-direction: column;
+      .footer-about-us, .footer-contact-us, .opening-hours {
+        border-bottom: 1px solid $border-color;
+        padding: 50px 20px;
+        height: auto;
+      }
+      .opening-hours {
+        border-bottom: none;
+      }
+      .footer-about-us {
+        .top-row {
+          h3 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  footer {
+    .footer-content-container {
+      .footer-about-us, .footer-contact-us, .opening-hours {
+        width: 88%;
+      }
+    }
+  }
+}
+
