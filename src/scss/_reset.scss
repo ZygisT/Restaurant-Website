@@ -1,0 +1,75 @@
+// ============================
+// Global Style Reset
+// ============================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhp.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'webfonts';
+  src: url('https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-solid-900.woff2') format('woff2'),
+       url('https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-regular-400.woff2') format('woff2'),
+       url('https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-brands-400.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body,
+html {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+*:focus {
+  outline: none;
+}
+
+// ============================
+// Global Styling
+// ============================
+
+.toTop {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  font-size: 20px;
+  padding: 10px;
+  color: #ef0031;
+  border: 1px solid #ef0031;
+  border-radius: $border-radius;
+  transition: $transition-behavor;
+}
+.toTop:hover {
+  background: $primary-hover-color;
+  color: $primary-font-color;
+}
+
+.center-content {
+  width: 1000px;
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .center-content {
+    width: 100%;
+  }
+}

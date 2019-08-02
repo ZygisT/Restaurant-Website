@@ -1,0 +1,131 @@
+.most-popular-pizzas-section {
+  position: relative;
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $primary-font-color;
+    padding: 100px 0px;
+    h2 {
+      @include h2-tag;
+      color: inherit;
+      z-index: 2;
+    }
+
+    .menu-items-container {
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      .menu-item-card {
+        text-align: center;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: $transition-behavor;
+        padding: 25px 0px;
+        .image-container {
+          width: 225px;
+          position: relative;
+          overflow: hidden;
+          .item-image {
+            width: 100%;
+            height: 225px;
+            transform: scale(0.9);
+          }
+        }
+
+        .item-name {
+          font-size: 18px;
+          margin-top: 20px;
+          font-weight: 500;
+        }
+
+        .item-price {
+          font-size: 24px;
+          margin-top: 5px;
+          font-weight: 600;
+        }
+        
+        .item-order-now-btn {
+          @include primary-btn($width: 70%);
+          font-size: 13px;
+          margin-top: 20px;
+          border: 1px solid $primary-btn-bg-color;
+          background: transparent;
+        }
+      }
+      .item-order-now-btn:hover {
+        background: $primary-btn-bg-color;
+      }
+    }
+    .call-to-action-btn {
+      z-index: 2;
+      @include primary-btn($width: 185px);
+      margin: 60px 0px;
+    }
+    .call-to-action-btn:hover {
+      background: transparent;
+    }
+  }
+
+}
+
+// Background images overlay
+.most-popular-pizzas-section::after {
+  @include background-overlay;
+}
+
+// Item card ribbon
+.ribbon {
+  position: absolute;
+  width: 110px;
+  top: 90px;
+  left: 10px;
+  background: red;
+  transform: rotate(0deg);
+  padding: 7px;
+  z-index: 4;
+  box-shadow: 0 0 10px #1d1d1d;
+  p {
+    // font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 480px) {
+  .most-popular-pizzas-section {
+    .content-wrapper {
+      h2 {
+        text-align: center;
+        font-size: 38px;
+      }
+      .menu-items-container {
+        .menu-item-card {
+          .item-order-now-btn:hover {
+            border: 1px solid #EF0031;
+          }
+        }
+      }
+    }
+  }
+
+  .hover-select {
+    background: transparent;
+  }
+}
+
+@media (max-width: 320px) {
+  .most-popular-pizzas-section {
+    .content-wrapper {
+      h2 {
+        text-align: center;
+        font-size: 32px;
+      }
+    }
+  }
+}
+

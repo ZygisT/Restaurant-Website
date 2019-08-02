@@ -1,0 +1,55 @@
+// ============================
+// Primary Button
+// ============================
+
+@mixin primary-btn($width) {
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: $primary-btn-bg-color;
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px;
+  width: $width;
+  border: 1px solid $primary-btn-bg-color;
+  border-radius: $border-radius;
+  transition: $transition-behavor;
+}
+
+// ============================
+// h2 tag
+// ============================
+
+@mixin h2-tag {
+  font-size: 3.8rem;
+  font-family: "beyond_the_mountainsregular";
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+// ============================
+// p - Paragraph styling
+// ============================
+
+@mixin p($padding) {
+  color: $secondary-font-color;
+  font-size: 14px;
+  line-height: 1.7;
+  padding: $padding;
+  font-weight: 300;
+}
+
+// Background overlay for images
+
+@mixin background-overlay {
+  content: "";
+  background: #000000a9;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
